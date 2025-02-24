@@ -1,0 +1,13 @@
+SRC = main.c src_1.c src_2.c src_3.c
+OBJ = $(SRC:.c=.o)
+
+all: target
+
+target: $(OBJ)
+	gcc -o main $(OBJ)
+
+%.o: %.c
+	gcc -c $< -o $@
+
+clean:
+	rm -f main *.o

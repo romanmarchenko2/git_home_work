@@ -1,0 +1,19 @@
+all: target
+
+target: main.o src_1.o src_2.o src_3.o
+	gcc -o main main.o src_1.o src_2.o src_3.o
+
+main.o: main.c
+	gcc -c main.c
+
+src_1.o: src_1.c
+	gcc -c src_1.c
+
+src_2.o: src_2.c
+	gcc -c src_2.c
+
+src_3.o: src_3.c
+	gcc -c src_3.c
+
+clean:
+	rm -f main *.o

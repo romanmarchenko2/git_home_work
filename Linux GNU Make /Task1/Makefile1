@@ -1,0 +1,7 @@
+all: target
+
+target: main.c src_1.c src_2.c src_3.c
+	gcc -o main main.c src_1.c src_2.c src_3.c
+
+clean:
+	rm -f main
